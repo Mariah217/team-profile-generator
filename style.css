@@ -12,4 +12,9 @@ header{
     padding: 1.5%;
 }
 
+.row2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
 
