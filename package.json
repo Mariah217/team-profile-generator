@@ -1,29 +1,5 @@
 {
-  "name": "team-profile-generator",
-  "version": "1.0.0",
-  "description": "Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:",
-  "main": "index.js",
-  "type": "module",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mariah217/team-profile-generator.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mariah217/team-profile-generator/issues"
-  },
-  "homepage": "https://github.com/Mariah217/team-profile-generator#readme",
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "inquirer": "^9.0.1"
+    "jest": "^28.1.3"
   }
 }
