@@ -120,12 +120,13 @@ const questions = [
         type: 'input',
         message: "What is the team manager's e-mail address?", 
     },
-    // {
-    //     type: 'list',
-    //     message: 'Would you like to add an engineer or an intern(please use arrows)?',
-    //     choices: ['Engineer', 'Intern', 'I don't want to add anymore team members'],
-    //     name: 'add',
-    // },
+    {
+        type: 'list',
+        message: 'Would you like to add an engineer or an intern?',
+        choices: ['Engineer', 'Intern', "I don't want to add anymore team members"],
+        name: 'add',
+        //  need an array of contructors, generate cards based off constructors. employee.push= new Manager etc. when you exit, use for loop
+    },
     {
         type: 'input',
         message: "What is the engineer's name?",
