@@ -24,6 +24,6 @@
   "homepage": "https://github.com/Mariah217/team-profile-generator#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^9.0.1"
+    "inquirer": "^8.2.4"
   }
 }
