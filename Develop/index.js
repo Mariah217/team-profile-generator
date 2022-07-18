@@ -4,10 +4,12 @@ const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 
+//function to initialize app
 function init() {
 
 }
 
+//calling function
 init()
 
 const generateHTML=(
@@ -113,8 +115,7 @@ const generateHTML=(
         </div>
     </body>
     `
-
-const questions = [
+const managerQuestions = [
     {
         type: 'input',
         message: "What is the team manager's name?",
@@ -129,6 +130,9 @@ const questions = [
         type: 'input',
         message: "What is the team manager's e-mail address?", 
     },
+]  
+
+const questions = [
     {
         type: 'list',
         message: 'Would you like to add an engineer or an intern?',
