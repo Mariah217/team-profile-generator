@@ -4,13 +4,7 @@ const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 
-//function to initialize app
-function init() {
-
-}
-
-//calling function
-init()
+const employeeArray=[]
 
 const generateHTML=(
     {
@@ -129,7 +123,13 @@ const managerQuestions = [
     {
         type: 'input',
         message: "What is the team manager's e-mail address?", 
+        name: 'managerEmail'
     },
+    {
+        type: 'input',
+        message: "What is the manager's office number?",
+        name: 'officeNumber'
+    }
 ]  
 
 const questions = [
@@ -185,9 +185,25 @@ const questions = [
 
 
 //function to write index.html file
-inquirer
-.prompt(questions)
-.then(response => {
-    console.log(response)
-    fs.writeFileSync("index.html", generateHTML(response))
-})
+function init(){
+    inquirer
+    .prompt(managerQuestions, questions)
+    .then(response => {
+        const manager = new Manager(response.managerName, resonse.managerID, response.managerEmail)
+        fs.writeFileSync("index.html", generateHTML(response))
+        employeeArray.push(manager)
+        confirmNext()
+    })
+}
+
+//calling function
+init();
+
+//
+function confirmNext(){
+inquirer.prompt([{
+    type: 'confirm',
+    message: "Do you want to add another employee?",
+    name: 'managerOfficeNumber'
+}])
+}
