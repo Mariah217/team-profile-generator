@@ -1,5 +1,14 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
+const Manager = require('./lib/Manager')
+const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
+
+function init() {
+
+}
+
+init()
 
 const generateHTML=(
     {
@@ -30,9 +39,9 @@ const generateHTML=(
                     
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID:${managerID}</li>
-                            <li class="list-group-item">E-mail:${managerEmail}</li>
-                            <li class="list-group-item">Office Number:${managerNumber}</li>
+                            <li class="list-group-item">ID: ${managerID}</li>
+                            <li class="list-group-item">E-mail: ${managerEmail}</li>
+                            <li class="list-group-item">Office Number: ${managerNumber}</li>
                           </ul>
                     </div>
                   </div>
@@ -45,9 +54,9 @@ const generateHTML=(
                 </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID:${engineerID}  </li>
-                            <li class="list-group-item">E-mail:${engineerEmail}</li>
-                            <li class="list-group-item">GitHub:${engineerGithub} </li>
+                            <li class="list-group-item">ID: ${engineerID}  </li>
+                            <li class="list-group-item">E-mail: ${engineerEmail}</li>
+                            <li class="list-group-item">GitHub: ${engineerGithub} </li>
                           </ul>
                     </div>
                   </div>
@@ -60,9 +69,9 @@ const generateHTML=(
                 </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">ID:${engineerID} </li>
-                            <li class="list-group-item">E-mail:${engineerEmail}</li>
-                            <li class="list-group-item">GitHub:${engineerGithub}</li>
+                            <li class="list-group-item">ID: ${engineerID} </li>
+                            <li class="list-group-item">E-mail: ${engineerEmail}</li>
+                            <li class="list-group-item">GitHub: ${engineerGithub}</li>
                           </ul>
                     </div>
                   </div>
@@ -95,8 +104,8 @@ const generateHTML=(
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${internID}</li>
-                            <li class="list-group-item">E-mail:${internEmail}</li>
-                            <li class="list-group-item">School:${internSchool} </li>
+                            <li class="list-group-item">E-mail: ${internEmail}</li>
+                            <li class="list-group-item">School: ${internSchool} </li>
                           </ul>
                     </div>
                   </div>

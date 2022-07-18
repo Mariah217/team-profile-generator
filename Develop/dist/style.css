@@ -28,5 +28,5 @@ ul {
 }
 
 .container {
-    box-shadow: ;
+    box-shadow: 5px 10px 8px #888888; /*need to fix so each card has a box shadow*/
 }
