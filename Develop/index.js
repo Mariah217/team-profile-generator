@@ -4,6 +4,9 @@ const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const generateHTML = require ('./src/generateHTML')
+const managerCard = require("./src/managerHTML")
+const engineerCard = require("./src/engineerHTML")
+const internCard = require("./src/internHTML")
 const employeeArray=[] //array to hold all employee constructors, will use to generate cards
 
 const managerQuestions = [
@@ -143,8 +146,17 @@ function addIntern(){
 
 //function to create the html if no other employee is selected
 function createHTML(){
-
+    console.log(employeeArray)
+    let cards= ""
+    for(let i=0; i < employeeArray.length; i ++){
+        if(employeeArray[i].getRole()==="Manager") {
+            cards=cards+managerCard(employeeArray[i])
+        }
+     else if (employeeArray[i].getRole()==="Engineer"){
+        cards=cards+engineerCard(employeeArray[i])
+    } else {
+        cards=cards+internCard(employeeArray[i])
+    }
+    fs.writeFileSync("./dist/team.html", generateHTML(cards))
+    }
 }
-
-
-// fs.writeFileSync("index.html", generateHTML(response))
