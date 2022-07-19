@@ -21,4 +21,4 @@ function generateHTML(cards) {
     </html>`
 }
 
-module.exports = generateHTML
+module.export = generateHTML()
