@@ -123,6 +123,24 @@ function addEmployee(){
     })
 }
 
+function addEngineer(){
+    inquirer.prompt(engineerQuestions)
+    .then(response=>{
+        const engineer = new Engineer (response.engineerName, response.engineerID, response.engineerEmail, response.engineerGithub)
+        employeeArray.push(engineer)
+        confirmNext();
+    })
+}
+
+function addIntern(){
+    inquirer.prompt(internQuestions)
+    .then(response=>{
+        const intern = new Intern (response.internName, response.internID, response.internEmail, response.internSchool)
+        employeeArray.push(intern)
+        confirmNext();
+    })
+}
+
 //function to create the html if no other employee is selected
 function createHTML(){
 
