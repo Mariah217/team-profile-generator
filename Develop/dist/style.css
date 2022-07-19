@@ -12,21 +12,6 @@ header{
     padding: 1%;
 }
 
-li {
-    color: black;
+#card1, #card2, #card3 {
+    box-shadow: 5px 10px 8px 5px #888888 ;
 }
-
-ul {
-    display: flex;
-    justify-content: center;
-}
-
-.row2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-}
-
-/* .container {
-    box-shadow: 5px 10px 8px #888888; /*need to fix so each card has a box shadow*/
-} */
