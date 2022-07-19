@@ -1,6 +1,6 @@
 const generateHTML=(
     {
-        managerName, managerID, managerEmail, managerNumber, engineerName, engineerID, engineerEmail, engineerGithub, internName, internID, internEmail, internSchool, 
+        managerName, managerID, managerEmail, managerOfficeNumber, engineerName, engineerID, engineerEmail, engineerGithub, internName, internID, internEmail, internSchool, 
     }
 ) =>
     `<!DOCTYPE html>
@@ -29,7 +29,7 @@ const generateHTML=(
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${managerID}</li>
                             <li class="list-group-item">E-mail: ${managerEmail}</li>
-                            <li class="list-group-item">Office Number: ${managerNumber}</li>
+                            <li class="list-group-item">Office Number: ${managerOfficeNumber}</li>
                           </ul>
                     </div>
                   </div>
@@ -102,14 +102,3 @@ const generateHTML=(
     </body>
     `
 
-const questions = [
-    {
-        type: 'list',
-        message: 'Would you like to add an engineer or an intern?',
-        choices: ['Engineer', 'Intern', "I don't want to add anymore team members"],
-        name: 'add',
-        //  need an array of contructors, generate cards based off constructors. employee.push= new Manager etc. when you exit, use for loop
-    },
-    
-  
-]

@@ -4,7 +4,7 @@ const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const generateHTML = require ('./src/generateHTML')
-const employeeArray=[]
+const employeeArray=[] //array to hold all employee constructors, will use to generate cards
 
 const managerQuestions = [
     {
@@ -25,7 +25,7 @@ const managerQuestions = [
     {
         type: 'input',
         message: "What is the manager's office number?",
-        name: 'officeNumber'
+        name: 'managerOfficeNumber'
     }
 ]  
 
@@ -76,13 +76,12 @@ const internQuestions = [
 ]
 
 
-//function to write index.html file
+//function to initiate manager questions
 function init(){
     inquirer
-    .prompt(managerQuestions, questions)
-    .then(response => {
-        const manager = new Manager(response.managerName, resonse.managerID, response.managerEmail)
-        fs.writeFileSync("index.html", generateHTML(response))
+    .prompt(managerQuestions)
+    .then(response => { 
+        const manager = new Manager(response.managerName, response.managerID, response.managerEmail, response.managerOfficeNumber)
         employeeArray.push(manager)
         confirmNext()
     })
@@ -91,11 +90,43 @@ function init(){
 //calling function
 init();
 
-//
+//function to add another employee
 function confirmNext(){
 inquirer.prompt([{
     type: 'confirm',
-    message: "Do you want to add another employee?",
-    name: 'managerOfficeNumber'
+    message: "Would you like to add another employee?",
+    name: 'addMore'
 }])
+.then(response =>{
+    if(addMore===true){
+        addEmployee()
+    } else {
+        createHTML()
+    }
+})
 }
+
+//function to add another employee
+function addEmployee(){
+    inquirer.prompt([{
+        type: "list",
+        message: "Would you like to add an engineer or an intern?",
+        choices: ["Engineer", "Intern"],
+        name: "selection"
+    }])
+    .then(response=>{
+        if(response.selection==="Engineer"){
+            addEngineer();
+        } else {
+            addIntern();
+        }
+    })
+}
+
+//function to create the html if no other employee is selected
+function createHTML(){
+
+}
+
+
+// fs.writeFileSync("index.html", generateHTML(response))
