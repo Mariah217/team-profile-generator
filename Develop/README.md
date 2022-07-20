@@ -2,11 +2,9 @@
 
 ## Description
 
-This Team Profile Generator allows you to answer command-line prompts regarding employees and generate a website displaying all the team members and their information. The team members include: manager, engineers and interns. Each card that populates holds information for each employee such as; name, ID, e-mail, office number, GitHub username and school. This application makes it easy to keep track of all your employees and their information. 
+This Team Profile Generator allows you to answer command-line prompts regarding employees and generate a website displaying all the team members and their information. The team members include: a manager, engineers and interns. Each card that populates, holds information for each employee such as; name, ID, e-mail, office number, GitHub username and school. This application makes it easy to keep track of all your employees and their information. 
 
 ## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -19,13 +17,11 @@ To begin using this application, you must install Node.js onto your computer. Th
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+![team profile generator screenshot](/Develop/images/Team%20Profile%20Generator.PNG)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![team profile generator demo](/Develop/images/Team%20Profile%20Demo.gif)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![team profile generator tests](/Develop/images/Team%20Profile%20Tests.gif)
 
 ## Credits
 
