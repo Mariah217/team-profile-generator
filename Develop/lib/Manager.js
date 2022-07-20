@@ -2,7 +2,7 @@ const Employee = require("./Employee") //importing Employee constructor
 
 //manager is a child class
 class Manager extends Employee{ //attatching parent class to manager class 
-    constructor(name,id,email,officeNumber){ //adding properties from employee contructor PLUS additional propertie officeNumber
+    constructor(name,id,email,officeNumber){ //adding properties from employee contructor PLUS additional property officeNumber
         super(name,id,email)
         this.officeNumber = officeNumber
     }
@@ -11,4 +11,4 @@ class Manager extends Employee{ //attatching parent class to manager class
     }
 }
 
-module.export=Manager
+module.exports=Manager

@@ -14,4 +14,4 @@ function managerHTML(manager){
   </div>`
 }
 
-module.export = managerHTML()
+module.exports = managerHTML

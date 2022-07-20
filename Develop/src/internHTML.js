@@ -14,4 +14,4 @@ function internHTML(intern){
   </div>`
 }
 
-module.export = internHTML()
+module.exports = internHTML

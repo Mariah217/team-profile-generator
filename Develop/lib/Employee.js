@@ -19,4 +19,4 @@ class Employee{ //parent class
 }
 
 //exports so children can use
-module.export=Employee
+module.exports=Employee
