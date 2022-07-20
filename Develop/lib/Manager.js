@@ -11,4 +11,4 @@ class Manager extends Employee{ //attatching parent class to manager class
     }
 }
 
-module.exports=Manager
+module.export=Manager

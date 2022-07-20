@@ -101,7 +101,7 @@ inquirer.prompt([{
     name: 'addMore'
 }])
 .then(response =>{
-    if(addMore===true){
+    if(response.addMore===true){
         addEmployee()
     } else {
         createHTML()
